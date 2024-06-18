@@ -1,12 +1,14 @@
+import API_KEY from "./private-config.js"
 
 const weatherForm= document.querySelector(".weatherForm");
 const cityInput = document.querySelector(".cityInput");
 const card = document.querySelector(".card");
-const apiKey = 
+const apiKey = API_KEY
 
 //
 weatherForm.addEventListener('submit', async event => {
     event.preventDefault();
+    console.log(apiKey)
     const city= cityInput.value;
     if(city){
       try{
